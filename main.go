@@ -6,4 +6,5 @@ import (
 
 func main() {
 	fmt.Printf("Hellooo!\n")
+	return 1
 }
