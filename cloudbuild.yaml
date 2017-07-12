@@ -1,0 +1,7 @@
+steps:
+- name: 'gcr.io/agoulti-a/main'
+  args: ['touch', '/workspace/test.go']
+- name: 'gcr.io/agoulti-a/main'
+  args: ['bash', '-c', 'go run /usr/share/main.go > /workspace/test.go']
+- name: 'gcr.io/cloud-builders/gsutil'
+  args: ['cp', '/workspace/test.go', 'gs://agoulti/test.go']
