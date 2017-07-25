@@ -13,7 +13,7 @@ import (
 )
 
 func main() {
-	fmt.Println("Hellooooooo! Woogo!");
+	fmt.Println("Hellooooooo! Woogo! New");
 }
 	`)
 }
