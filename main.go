@@ -2,10 +2,17 @@ package main
 
 import (
 	"fmt"
+	"os"
+	"io/ioutil"
 )
 
 func main() {
-	fmt.Printf(`
+	filename := ""
+	if len(os.Args) > 1 {
+		filename = os.Args[1]
+	}
+
+	str := `
 package main
 
 import (
@@ -15,5 +22,14 @@ import (
 func main() {
 	fmt.Println("Hellooooooo! Woogo! New and again");
 }
-	`)
+`
+
+	if filename == "" {
+		fmt.Println(str)
+	} else {
+		err := ioutil.WriteFile(filename, []byte(str), 0644)
+		if err != nil {
+			panic(err)
+		}
+	}
 }
