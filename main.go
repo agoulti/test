@@ -20,7 +20,7 @@ import (
 )
 
 func main() {
-	fmt.Println("Hellooooooo! Woogo! New and again");
+	fmt.Println("This is a test message! Hello!");
 }
 `
 
